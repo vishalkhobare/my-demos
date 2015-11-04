@@ -1,0 +1,59 @@
+@charset "utf-8";
+/* CSS Document */
+
+body { margin-left: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; font-family:Arial, Helvetica, sans-serif; font-size:12px; background:#CCCCCC; }
+.chess { border:1px solid teal; height:440px; width:440px; margin:0 auto; position:relative; }
+.chess .block-black, .chess .block-white { position:absolute; width:50px; height:50px; }
+.chess .block-white { background:#fbce9c center center no-repeat; }
+.chess .block-black { background:#d38d47 center center no-repeat; }
+.chess .block-black:hover,.chess .block-white:hover { background-color:#999;}
+.chess .piece-black-pawn { background-image: url(../images/bpawn.png); }
+.chess .piece-black-knight { background-image:url(../images/bhorse.png); }
+.chess .piece-black-rook { background-image:url(../images/brook.png); }
+.chess .piece-black-bishop { background-image:url(../images/bbishop.png); }
+.chess .piece-black-queen { background-image:url(../images/bqueen.png); }
+.chess .piece-black-king { background-image:url(../images/bking.png); }
+.chess .piece-white-pawn { background-image: url(../images/wpawn.png); }
+.chess .piece-white-knight { background-image:url(../images/whorse.png); }
+.chess .piece-white-rook { background-image:url(../images/wrook.png); }
+.chess .piece-white-bishop { background-image:url(../images/wbishop.png); }
+.chess .piece-white-queen { background-image:url(../images/wqueen.png); }
+.chess .piece-white-king { background-image:url(../images/wking.png); }
+.chess .board { margin:20px; position:relative;}
+.chess .hover,.chess .hover-click, .chess .hover-click-originate { background-color:teal !important; }
+.chess .piece-black-pawn:hover,.chess .piece-black-knight:hover,
+.chess .piece-black-rook:hover,
+.chess .piece-black-bishop:hover,
+.chess .piece-black-queen:hover ,
+.chess .piece-black-king:hover ,
+.chess .piece-white-pawn:hover ,
+.chess .piece-white-knight:hover ,
+.chess .piece-white-rook:hover ,
+.chess .piece-white-bishop:hover ,
+.chess .piece-white-queen:hover ,
+.chess .piece-white-king:hover  { background-color:pink; }
+.chess .disable-board { position:absolute; height:440px; width:440px; opacity:0.5; background:red; display:none; top:0; left:0;}
+.hide { display:none;}
+.vis-vis { visibility:visible;}
+.vis-hid { visibility:hidden;}
+.error { color:red; font-weight:bold;}
+.success { color:green; font-weight:bold;}
+
+#popup {width:500px; margin:0 auto; font-size:12px; color:green; font-weight:bold; text-align:center;}
+#txtName { width:100px;}
+#all { width:900px; margin:20px auto;;}
+#header { height:100px;  border-radius:10px 10px 0 0;  background:#fff;}
+#menu { height:30px; background:#9bb2c8;}
+#body { background:#fff;clear:both;}
+#footer { clear:both;height:20px;border-radius:0 0 20px 20px; background:#9bb2c8; text-align:center;}
+.col{
+	float:left;
+	width:30%;
+	clear:right;
+}
+
+.clear { clear::both;}
+#orientationDiv {
+	width:500px;
+	margin:0 auto;
+}

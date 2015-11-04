@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Air Traffic Controller game in jQuery/HTML5/CSS3</title>
+<link rel="stylesheet" href="css/style.css" />
+<script language="javascript" src="js/jquery-1.10.2.min.js"></script>
+<script language="javascript" src="js/data.js"></script>
+<script language="javascript" src="js/classes.js"></script>
+<script language="javascript" src="js/functions.js"></script>
+<script language="javascript" src="js/airport.js"></script>
+<script language="javascript" src="js/common.js"></script>
+</head>
+<body>
+<div id="map">
+  <canvas id="airport" width="400" height="300"></canvas>
+</div>
+<!--div class="ref1"></div>
+<div class="ref2"></div>
+<div class="ref3"></div>
+<div class="circcle"></div>
+<div class="circcle1"></div--> 
+<!--div id="testDivID" style="position:fixed;width:400px;height:100px;background:white;top:0;left:0;overflow:auto">
+	<h1>Click any plane to select it and then click anywhere in browser to move that plane to new position</h1>
+</div>
+<div id="testDivButtonID" style="position:fixed;width:400px;height:100px;background:white;top:0;left:500px;overflow:auto"></div-->
+<div id="smallMap"><canvas class="radarCanvas" width="350" height="350"></canvas>
+<canvas class="planeCanvas" width="350" height="350"></canvas></div>
+<div id="panel"><div class="info"></div>
+	<div class="planeDescData"></div>
+	<div class="messsageBox"></div>
+	<h2 class="white">Press F1 for Help</h2>
+</div>
+<div id="youtube"></div>
+
+<div id="screenBlackOut">
+	<div class="help">
+	<input type="button" value="Start/Resume the game" class="btnStartGame" />
+	<h3>Below is the Youtube video showing game play</h3>
+	<iframe width="560" height="315" src="//www.youtube.com/embed/Wb4dYKQFpvI" frameborder="0" allowfullscreen></iframe><br><br>
+	Your new job is to regulate air traffic to the airbase. <br>The airbase is shared between civilian and military aircrafts. 
+	The airbase resorts squadron of formiddable Sukhois. Naturally, the preference to use the the airbase is given to military but when the airbase 
+	is not used by military, your job is to depart civilian flights on time and land the incoming civilian airplanes.<br><br>A radar is provided which just displays 
+	current aerial traffic status.<br><br>
+	You have no control over the airstrip used by Sukhois. Sukhois take off and land without your formal permission. They keep performing their mission flights periodically.
+	This makes your task to manage civilian flight traffic difficult. It is expected that you manage the traffic in such a way that there is no collision among the planes on
+	airstrip. But, no condition/restriction is put to check whether the traffic is well managed by you. In other words, there is no scenario such as 'Game Over' even if
+	planes keep colliding on each other on airstrip .<br><br>You can do below operation on civilian flights.
+	<ol>
+		<li>Takeoff - If the plane has green strip across it, it is sign that the plane should be airborne now. To sent the plane airborne, click it and then click the button
+		 "Take Off". When you click the planes, a red strip appears across their nose to indicate that you have selected the plane.<br><br>All Sukhois indicate their intention to 
+		 takeoff by starting flash lights before 5 seconds of take-off. This should be a good hint to decide when to send the flights airborne. However, you should not rely
+		 totally on this hint always.</li>
+		<li>Landing - In similar way, when you click on "Land" button, the plane will perform landing</li>
+		<li>Pause taxying - You can controll taxying of civil planes with this button.</li>
+		<li>If you opted to see Youtube videos, videos will keep coming showing the activites going on the airbase (e.g. landing/takeoffs)</li>
+		<li>Messages keep popping at the right side of panel shown at the bottom of the browser. White colored messages are for civilian airplanes while 
+		red colored messages are for Sukhois</li>
+		
+	</ol>
+	<h3 class="red">Finally, there are lot of bugs in the game which I did not fix (I may fix them in near future). The purpose of this game was to learn basics of game development and not
+	 to create high end professional game but I tried my best to fix maximum bugs.</h3>
+	<input type="button" value="Start/Resume the game" class="btnStartGame" />
+	<br><br><br>
+	</div>
+	<div class="initial">
+			<span class="red">Mozilla Firefox 26.0</span> is recommanded to play this game. I did not thoroughly test the game script in other browsers.
+			<ol>
+				<li>Select whether you will like to see Youtube videos along with the game.<br>
+					<label><input type="radio" name="yt" value="y" checked />Show me Youtube videos</label><br>
+					<label><input type="radio" name="yt" value="n" />Don't Show me Youtube videos</label>
+				</li>
+				
+				<li style="margin-top:50px;">
+					<table width="100%">
+						<tr>
+							<td width="50%">Choose game difficulty level (This will add number of fighter planes on the airbase.): </td>
+							<td><select id="gameDifficultyLEvel" style="width:50%;">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7" selected='selected'>7</option>
+							</select></td>
+						</tr>
+					</table>	
+				</li>		
+				
+			</ol>
+			<h3 class="red">If you are here for first time, I suggest to read help manual or watch a Youtube video of gameplay.<br>
+				For this, click on button "Show help on how to play the game" below.
+			</h3>
+			<input type="button" value="Start the game" id="btnStartGameDirect" />
+			<input type="button" value="Show help on how to play the game" id="btnShowHelp" />
+			
+	</div>
+</div>
+</body>
+</html>

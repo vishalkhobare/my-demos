@@ -1,0 +1,50 @@
+body{
+	margin:0;
+	padding:0;
+	background:url(../images/terrain.jpg);
+	font-family:Arial, Helvetica, sans-serif;
+	overflow:hidden;
+}
+.redBeam { position:absolute; right:0; top:50%; }
+.greenBeam { position:absolute; left:0;top:50%;}
+.insky { z-index:10000;}
+canvas ,#map{ /*border:2px solid red;*/ position:absolute;}
+.focussedPlane{ background:pink;}
+.airplane{ position:absolute;z-index:10000;}
+.ref1,.ref2,.ref3 { position:absolute;height:1px; background:red;width:100%;}
+.circcle{ background:red;width:10px;height:10px; position:absolute;}
+.circcle1{ background:blue;width:10px;height:10px; position:absolute;}
+.stickred{ width:100px;height:1px;background:red;position:absolute;top:100px;}
+.stickblue{ width:100px;height:1px;background:blue;position:absolute;top:300px;}
+.airplane { background:url(../images/tanker.png); width:50px; height:57px; position:Absolute;}
+.pa{position:Absolute;}
+/*.su33{ /*background:url(../images/su33.png);*/ /*width:50px; height:73px; position:Absolute;}
+.f22{ background:url(../images/f22u.png); width:50px; height:69px; position:Absolute;}
+.f18{ background:url(../images/f18.png); width:50px; height:76px; position:Absolute;}*/
+.circle{position:absolute;}
+.circled{position:absolute;}
+.lineC{position:absolute;height:2px;background:red;}
+.lineAC{position:absolute;height:2px;background:blue;}
+.nose{height:10px;width:10px; background:teal;position:absolute;}
+.selected { border-bottom:2px solid red;}
+.parkingSlot { width:25px;height:36px; position:absolute;}/*background:red;*/
+.parkingDot{ border-radius:3px;width:6px;height:6px;position:absolute;background:red;z-index:1000;}
+.pathval { position:absolute;height:200px; width:200px; background:white; border:2px solid red; color:red;right:0;}
+#panel {width:786px;height:242px; background:url(../images/panel.png); position:absolute; bottom:0;margin:0 auto; z-index:20000000000;}
+#panel .plnButton { width:200px;height:125px; margin:100px auto 0 auto; display:none;}
+#smallMap  { position:absolute; top:0;  background:black;border-radius:150px;overflow:hidden;width:300px;height:300px;}
+#smallMap .radarCanvas{ background:black; z-index:1;border-radius:150px;}
+.planeCanvas { z-index:100000000;}
+#divmessages { position:absolute; top:0; width:400px; padding:20px; background:white; font-weight:bold;color:red;z-index:10000000000000;}
+#panel .info{ margin:40px 0 0 10px; width:300px; position:absolute;}
+.messsageBox{margin:40px 0 0 10px; padding:10px; width:200px; position:absolute;right:0;height:200px; overflow:auto;color:white;font-size:14px;}
+.warning { color:red;font-weight:bold;}
+#youtube { position:absolute;  overflow:hidden; right:0;z-index:9999999999999999999;}
+.timerWidth {position:absolute;width:100%;height:5px; background:green;bottom:0;display:none;}
+h2{color:white;}
+#screenBlackOut{padding:30px;position:absolute;background:black;top:0;left:0;height:100%;width:100%;z-index:99999999999999999999999;}
+#screenBlackOut .initial {width:500px;margin:0 auto; background:White; padding:20px;}
+#screenBlackOut .help{display:none;width:760px;margin:0 auto; background:White; padding:20px; height:400px; overflow:auto;}
+h3.red{color:red;}
+#panel h2.white { position:absolute;left:10px;bottom:10px; color:white;}
+.red{ color:red;}

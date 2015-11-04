@@ -1,0 +1,1 @@
+Just open index.html in browser. This HTML file explain in detail all projects.
